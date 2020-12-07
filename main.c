@@ -98,9 +98,9 @@ int menu() {
     move(8, 15);
     printw("h - left");
     move(9, 15);
-    printw("j - up");
+    printw("j - down");
     move(10, 15);
-    printw("k - down");
+    printw("k - up");
     move(11, 15);
     printw("l - right");
     move(13, 7);
@@ -186,10 +186,10 @@ void updateDirection() {
                 currentDirection = lastDirection == right ? lastDirection : left;
                 break;
             case 'j': 
-                currentDirection = lastDirection == down ? lastDirection : up;
+                currentDirection = lastDirection == up ? lastDirection : down;
                 break;
             case 'k': 
-                currentDirection = lastDirection == up ? lastDirection : down;
+                currentDirection = lastDirection == down ? lastDirection : up;
                 break;
             case 'l': 
                 currentDirection = lastDirection == left ? lastDirection : right;
